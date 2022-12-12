@@ -24,14 +24,6 @@ class Species
     #[ORM\JoinColumn(nullable: false)]
     private ?Genus $genus = null;
 
-    #[ORM\OneToMany(mappedBy: 'species', targetEntity: Plant::class)]
-    private Collection $plants;
-
-    public function __construct()
-    {
-        $this->plants = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -57,36 +49,6 @@ class Species
     public function setGenus(?Genus $genus): self
     {
         $this->genus = $genus;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Plant>
-     */
-    public function getPlants(): Collection
-    {
-        return $this->plants;
-    }
-
-    public function addPlant(Plant $plant): self
-    {
-        if (!$this->plants->contains($plant)) {
-            $this->plants->add($plant);
-            $plant->setSpecies($this);
-        }
-
-        return $this;
-    }
-
-    public function removePlant(Plant $plant): self
-    {
-        if ($this->plants->removeElement($plant)) {
-            // set the owning side to null (unless already changed)
-            if ($plant->getSpecies() === $this) {
-                $plant->setSpecies(null);
-            }
-        }
 
         return $this;
     }
