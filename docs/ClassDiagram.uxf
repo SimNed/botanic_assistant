@@ -1,0 +1,79 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>7</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>179</x><y>133</y><w>259</w><h>189</h></coordinates><panel_attributes>Plant
+--
+
+id : int
+
+commonName : string
+species : Species
+
+lifespan : string
+rusticity : int
+exposure : int
+watering : int
+
+soils : Soil []
+productionMethods : ProductionMethod []
+harvests : Harvest []
+
+cultivationRecommendations : cultivationRecommendation []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>431</x><y>7</y><w>84</w><h>77</h></coordinates><panel_attributes>Family
+--
+
+id : int
+name : string
+genuses : Genus []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>305</x><y>7</y><w>84</w><h>77</h></coordinates><panel_attributes>Genus
+--
+
+id : int
+name : string
+family : Family
+species : Species []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>179</x><y>7</y><w>84</w><h>77</h></coordinates><panel_attributes>Species
+--
+
+id : int
+name : string
+genus : Genus
+plants : Plant []</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>35</y><w>63</w><h>28</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>382</x><y>35</y><w>63</w><h>28</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>193</x><y>77</y><w>28</w><h>70</h></coordinates><panel_attributes>m1=*
+m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>39</x><y>231</y><w>98</w><h>84</h></coordinates><panel_attributes>Soil
+--
+
+id : int
+name : string
+waterAbsorption : int
+fertility : int
+plants : Plant []
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>154</y><w>98</w><h>70</h></coordinates><panel_attributes>ProductionMethod
+--
+
+id : int
+type : string
+period : Period
+plants : Plant []
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>266</y><w>98</w><h>63</h></coordinates><panel_attributes>Period
+--
+
+id : int
+startMonth : Month
+endMonth : Month
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>266</y><w>98</w><h>63</h></coordinates><panel_attributes>Harvest 
+--
+
+id : int
+period : Period
+plants : Plant []
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>179</x><y>371</y><w>126</w><h>70</h></coordinates><panel_attributes>CultivationRecommendation
+--
+
+id : int
+type : string
+recommendationText : text
+plant : Plant</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>252</y><w>63</w><h>35</h></coordinates><panel_attributes>m1=*
+m2=*
+</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>431</x><y>182</y><w>63</w><h>119</h></coordinates><panel_attributes>m1=*
+m2=*</panel_attributes><additional_attributes>70;10;40;10;40;140;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>431</x><y>287</y><w>63</w><h>35</h></coordinates><panel_attributes>m1=*
+m2=*
+</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>193</x><y>315</y><w>28</w><h>70</h></coordinates><panel_attributes>m1=*
+m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>571</x><y>301</y><w>63</w><h>28</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>571</x><y>203</y><w>63</w><h>105</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;120;40;120;40;10;10;10</additional_attributes></element></diagram>
