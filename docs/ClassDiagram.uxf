@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>7</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>179</x><y>133</y><w>259</w><h>189</h></coordinates><panel_attributes>Plant
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>252</x><y>162</y><w>333</w><h>243</h></coordinates><panel_attributes>Plant
 --
 
 id : int
@@ -15,65 +15,61 @@ soils : Soil []
 productionMethods : ProductionMethod []
 harvests : Harvest []
 
-cultivationRecommendations : cultivationRecommendation []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>431</x><y>7</y><w>84</w><h>77</h></coordinates><panel_attributes>Family
+cultivationRecommendations : cultivationRecommendation []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>0</y><w>108</w><h>99</h></coordinates><panel_attributes>Family
 --
 
 id : int
 name : string
-genuses : Genus []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>305</x><y>7</y><w>84</w><h>77</h></coordinates><panel_attributes>Genus
+genuses : Genus []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>0</y><w>108</w><h>99</h></coordinates><panel_attributes>Genus
 --
 
 id : int
 name : string
 family : Family
-species : Species []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>179</x><y>7</y><w>84</w><h>77</h></coordinates><panel_attributes>Species
+species : Species []</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>0</y><w>108</w><h>99</h></coordinates><panel_attributes>Species
 --
 
 id : int
 name : string
 genus : Genus
-plants : Plant []</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>256</x><y>35</y><w>63</w><h>28</h></coordinates><panel_attributes>m1=1
-m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>382</x><y>35</y><w>63</w><h>28</h></coordinates><panel_attributes>m1=1
-m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>193</x><y>77</y><w>28</w><h>70</h></coordinates><panel_attributes>m1=*
-m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>39</x><y>231</y><w>98</w><h>84</h></coordinates><panel_attributes>Soil
+plants : Plant []</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>351</x><y>36</y><w>81</w><h>36</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>36</y><w>81</w><h>36</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>90</y><w>36</w><h>90</h></coordinates><panel_attributes>m1=*
+m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>72</x><y>288</y><w>126</w><h>99</h></coordinates><panel_attributes>Soil
 --
 
 id : int
 name : string
 waterAbsorption : int
 fertility : int
-plants : Plant []
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>154</y><w>98</w><h>70</h></coordinates><panel_attributes>ProductionMethod
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>639</x><y>189</y><w>126</w><h>90</h></coordinates><panel_attributes>ProductionMethod
 --
 
 id : int
 type : string
 period : Period
-plants : Plant []
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>266</y><w>98</w><h>63</h></coordinates><panel_attributes>Period
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>819</x><y>333</y><w>126</w><h>81</h></coordinates><panel_attributes>Period
 --
 
 id : int
-startMonth : Month
-endMonth : Month
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>266</y><w>98</w><h>63</h></coordinates><panel_attributes>Harvest 
+startMonth : int
+endMonth : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>639</x><y>333</y><w>126</w><h>72</h></coordinates><panel_attributes>Harvest 
 --
 
 id : int
-period : Period
-plants : Plant []
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>179</x><y>371</y><w>126</w><h>70</h></coordinates><panel_attributes>CultivationRecommendation
+period : Period</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>468</y><w>162</w><h>90</h></coordinates><panel_attributes>CultivationRecommendation
 --
 
 id : int
 type : string
 recommendationText : text
-plant : Plant</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>252</y><w>63</w><h>35</h></coordinates><panel_attributes>m1=*
+plant : Plant</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>315</y><w>81</w><h>45</h></coordinates><panel_attributes>m1=*
 m2=*
-</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>431</x><y>182</y><w>63</w><h>119</h></coordinates><panel_attributes>m1=*
-m2=*</panel_attributes><additional_attributes>70;10;40;10;40;140;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>431</x><y>287</y><w>63</w><h>35</h></coordinates><panel_attributes>m1=*
+</panel_attributes><additional_attributes>70;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>225</y><w>81</w><h>153</h></coordinates><panel_attributes>m1=*
+m2=*</panel_attributes><additional_attributes>70;10;40;10;40;140;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>360</y><w>81</w><h>45</h></coordinates><panel_attributes>m1=*
 m2=*
-</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>193</x><y>315</y><w>28</w><h>70</h></coordinates><panel_attributes>m1=*
-m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>571</x><y>301</y><w>63</w><h>28</h></coordinates><panel_attributes>m1=1
-m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>571</x><y>203</y><w>63</w><h>105</h></coordinates><panel_attributes>m1=1
+</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>396</y><w>36</w><h>90</h></coordinates><panel_attributes>m1=*
+m2=1</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>378</y><w>81</w><h>36</h></coordinates><panel_attributes>m1=1
+m2=*</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>252</y><w>81</w><h>135</h></coordinates><panel_attributes>m1=1
 m2=*</panel_attributes><additional_attributes>70;120;40;120;40;10;10;10</additional_attributes></element></diagram>
