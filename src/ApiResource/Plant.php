@@ -12,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ApiResource]
 class Plant
 {
+    const LIFESPAN = ['annual', 'biennial', 'perennial'];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -25,15 +27,19 @@ class Plant
     private ?Species $species = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Choice(choices: self::LIFESPAN, message: 'Choose a valid lifespan.')]
     private ?string $lifespan = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 3, notInRangeMessage: 'Choose a valid rusticity.')]
     private ?int $rusticity = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 3, notInRangeMessage: 'Choose a valid exposure.')]
     private ?int $exposure = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 3, notInRangeMessage: 'Choose a valid watering.')]
     private ?int $watering = null;
 
     #[ORM\ManyToMany(targetEntity: Soil::class)]

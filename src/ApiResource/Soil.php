@@ -10,18 +10,23 @@ use Doctrine\ORM\Mapping as ORM;
 #[ApiResource]
 class Soil
 {
+    const TYPES = ['sand', 'clay', 'silt', 'chalk', 'peat', 'loam'];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Choice(choices: self::TYPES, message: 'Choose a valid production method type.')]
     private ?string $name = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 3, notInRangeMessage: 'Choose a valid waterAbsorption.')]
     private ?int $waterAbsorption = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 3, notInRangeMessage: 'Choose a valid fertility.')]
     private ?int $fertility = null;
 
     public function getId(): ?int

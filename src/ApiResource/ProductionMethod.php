@@ -10,12 +10,15 @@ use Doctrine\ORM\Mapping as ORM;
 #[ApiResource]
 class ProductionMethod
 {
+    const TYPES = ['sowing in open ground', 'sowing under cover', 'sowing on hotbed', 'transplanting', 'cuttings'];
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Choice(choices: self::TYPES, message: 'Choose a valid production method type.')]
     private ?string $type = null;
 
     #[ORM\ManyToOne]

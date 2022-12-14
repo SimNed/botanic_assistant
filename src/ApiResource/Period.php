@@ -16,9 +16,11 @@ class Period
     private ?int $id = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 12, notInRangeMessage: 'Choose a valid month.')]
     private ?int $startMonth = null;
 
     #[ORM\Column]
+    #[Assert\Range(min: 1, max: 12, notInRangeMessage: 'Choose a valid month.')]
     private ?int $endMonth = null;
 
     public function getId(): ?int
