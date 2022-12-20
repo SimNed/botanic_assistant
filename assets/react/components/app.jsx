@@ -3,12 +3,12 @@ import Header from './header.jsx';
 
 const App = () => {
   return (
-    <React.Fragment>
+    <div id="app-wrapper">
       <Header/>  
       <main>
         <h1>Botanic assistant</h1>
       </main>
-    </React.Fragment>
+    </div>
   );
 };
 
