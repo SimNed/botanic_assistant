@@ -23,7 +23,7 @@ const NavLinksList = () => {
     return(
         <ul>
             {navLinksListDatas.map(({label, href}) => (
-                <li>
+                <li key={label + href}>
                     <a href={href}>{label}</a>
                 </li>
             ))}
