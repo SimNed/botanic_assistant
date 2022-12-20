@@ -10,6 +10,17 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
+#app{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+    width: 100%;
+    background: #5c9681;
+}
+
 header, header ul{
     margin: 0;
     padding: 0;
@@ -17,7 +28,6 @@ header, header ul{
 
 header {
     background-color: #141115;
-    padding: 1.5em;
 }
 
 header ul li a{
@@ -33,6 +43,7 @@ header ul li a:hover{
 }
 
 h1{
+    background: red;
     color: #5c9681;
     font-size: 3em;
     font-weight: 600;
@@ -41,3 +52,4 @@ h1{
 li{
     list-style-type: none;
 }
+
