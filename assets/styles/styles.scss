@@ -10,14 +10,8 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
-#app{
+#app-wrapper{
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-    width: 100%;
     background: #5c9681;
 }
 
