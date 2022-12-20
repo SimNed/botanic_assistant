@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from './header.jsx';
 
 const App = () => {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
+      <Header/>
+      <h1>Botanic assistant</h1>
     </div>
   );
 };
