@@ -12,16 +12,22 @@ body{
 
 #app-wrapper{
     display: flex;
-    background: #5c9681;
 }
 
 header, header ul{
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
-header {
+header{
     background-color: #141115;
+
+    padding: 1.5em;
+}
+
+main{
+    padding: 1.5em;
 }
 
 header ul li a{
@@ -33,14 +39,14 @@ header ul li a{
 }
 
 header ul li a:hover{
-    color: #5c9681;
+    color: #70c1b3;
 }
 
 h1{
-    background: red;
     color: #5c9681;
     font-size: 3em;
     font-weight: 600;
+    margin: 0;
 }
 
 li{
