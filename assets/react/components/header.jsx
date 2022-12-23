@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavLinksList from './navLinksList'
+import NavLinksList from './nav_links_list'
 
 const Header = () => {
   return (
