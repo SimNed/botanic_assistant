@@ -1,3 +1,61 @@
-body{
-    background-color: salmon;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    background-color: rgb(255, 231, 228);
+    font-family: 'Work Sans', sans-serif;
+}
+
+#app-wrapper{
+    display: flex;
+}
+
+header, header ul{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header{
+    background-color: #141115;
+
+    padding: 1.5em;
+}
+
+main{
+    padding: 1.5em;
+}
+
+header ul li a{
+    color: rgb(255, 231, 228);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: all ease 0.2s;
+}
+
+header ul li a:hover{
+    color: #70c1b3;
+}
+
+h1{
+    color: #5c9681;
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+#svg-canvas{
+    background-color: white;
+    width: 600px;
+    height: 450px;
+}
+

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './header.jsx';
-import SvgCanvas from './svg_canvas.jsx';
+import Header from './header';
+import SvgCanvas from './svg_canvas';
 
 const App = () => {
   return (

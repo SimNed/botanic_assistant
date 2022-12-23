@@ -12,28 +12,30 @@ const SvgCanvas = () => {
     
     const svgCanvas = svgCanvasRef.current;
 
-    var originPositionPoints;
-    var tempPolygon;
-
     function InitTempPolygon(e){
-      originPositionPoints = new DOMPoint(e.clientX, e.clientY);
-      tempPolygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      svgCanvas.originPositionPoints = new DOMPointReadOnly(e.clientX, e.clientY);
+      svgCanvas.tempPolygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+      console.log('InitRecognize');
     }
 
     function DrawingTempPolygon(e){
+      
       let coordinates = [
-        originPositionPoints.x, originPositionPoints.y,
-        e.clientX, originPositionPoints.y,
+        svgCanvas.originPositionPoints.x, svgCanvas.originPositionPoints.y,
+        e.clientX, svgCanvas.originPositionPoints.y,
         e.clientX, e.clientY,
-        originPositionPoints.x, e.clientY
+        svgCanvas.originPositionPoints.x, e.clientY
       ]
-      tempPolygon.setAttribute('points', coordinates.toString());
-      tempPolygon.setAttribute("style", "stroke:black; stroke-width:1;");
+
+      console.log('MoveRecognize');
+      
+      svgCanvas.tempPolygon.setAttribute('points', coordinates.toString());
+      svgCanvas.tempPolygon.setAttribute("style", "stroke:black; stroke-width:1;");
     }
 
     svgCanvas.addEventListener('mousedown', (e) => {
+      svgCanvas.addEventListener('mousedown', DrawingTempPolygon);
       InitTempPolygon(e);
-      svgCanvas.addEventListener('mousemove', DrawingTempPolygon)
     })
 
     svgCanvas.addEventListener('mouseup', (e) => {
@@ -41,12 +43,11 @@ const SvgCanvas = () => {
       console.log('mouse up');
     })
 
-}, []);
+  }, []);
 
-
-    return (
-        <svg ref={svgCanvasRef} id="svg-canvas"></svg>
-    );
+  return (
+      <svg ref={svgCanvasRef} id="svg-canvas"></svg>
+  );
 };
 
 export default SvgCanvas;

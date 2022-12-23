@@ -1,5 +1,10 @@
 import React from 'react';
 
+interface INavLink{
+    label: string,
+    href: string,
+}
+
 const navLinksListDatas = [
     {
         label: "Home",
